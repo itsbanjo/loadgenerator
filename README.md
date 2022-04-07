@@ -1,12 +1,15 @@
 # loadgenerator
 Based on the loadgenerator from Google's microservices-demo, except that it is using https protocol to generate load an expose route of the microservices-demo
 
-
 To deploy in Openshift:  
+
+```
 oc create -f manifest/loadgenerator.yaml
 oc set env deployment/external-loadgenerator FRONTEND_ADDR=route.for.your.microservices.demo
-
+```
 you should see 0% failure upon changing the FRONTEND_ADDR
+
+
 
 ```
 
